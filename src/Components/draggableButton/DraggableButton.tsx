@@ -1,5 +1,5 @@
 import React, { MouseEventHandler } from 'react'
-import GridLayout from 'react-grid-layout'
+import { Responsive, WidthProvider } from 'react-grid-layout'
 import './DraggableButton.css'
 
 
@@ -11,9 +11,18 @@ const layout = [
     {i: "summoned-skull", x: 4, y: 0, w: 1, h: 1 }
 ]
 
+const ResponsiveGridLayout = WidthProvider(Responsive);
+
 const DraggableButton = () => {
     return (
-        <GridLayout layout={layout} cols={5} rowHeight={300} width={1000} compactType={'vertical'}>
+        <ResponsiveGridLayout
+            layouts={{ lg: layout}}
+            breakpoints={{ lg: 1200, md: 996, sm: 768, xs: 480, xxs: 0 }}
+            cols={{ lg: 5, md: 4, sm: 3, xs: 2, xxs: 1}}
+            rowHeight={300}
+            width={1000}
+            compactType={'vertical'}
+        >
             <div key="blue-eyes-dragon" className='grid-item-wrapper'>
                 <div className='grid-item-content'>
                     Blue Eyes Dragon
@@ -39,7 +48,7 @@ const DraggableButton = () => {
                     Summoned Skull
                 </div>
             </div>
-        </GridLayout>
+        </ResponsiveGridLayout>
     )
 }
 
