@@ -1,12 +1,12 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-import DraggableButton from './Components/draggableButton/DraggableButton';
+import { Grid } from './Components/grid/Grid';
 
 function App() {
   return (
     <div className="App">
-      <DraggableButton />
+      <Grid />
 
       {/* <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
