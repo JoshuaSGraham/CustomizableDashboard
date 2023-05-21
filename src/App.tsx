@@ -2,10 +2,14 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 import { Grid } from './Components/grid/Grid';
+import { WidgetsSideBar } from './Components/widgetsSideBar/WidgetsSideBar'
+import { ProSidebarProvider } from 'react-pro-sidebar';
 
 function App() {
   return (
+    <ProSidebarProvider>
     <div className="App">
+      <WidgetsSideBar />
       <Grid />
 
       {/* <header className="App-header">
@@ -23,6 +27,7 @@ function App() {
         </a>
       </header> */}
     </div>
+    </ProSidebarProvider>
   );
 }
 

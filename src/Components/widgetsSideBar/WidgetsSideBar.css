@@ -1,0 +1,5 @@
+.side-bar-container {
+    display: flex;
+    height: 100vh;
+    text-align: center;
+}
